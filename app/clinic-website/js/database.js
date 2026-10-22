@@ -1,14 +1,14 @@
 /* =========================================================
    database.js — reusable IndexedDB service
    Database: ClinicalManagementDB
-   Object stores: users, patients, doctors, admins,
+   Object stores: users, patients, doctors, admins, medicines,
                   appointments, medicalRecords, prescriptions,
                   keystore, meta, auditLog
    ========================================================= */
 
 const CMS_DB = (() => {
   const DB_NAME = "ClinicalManagementDB";
-  const DB_VERSION = 1;
+  const DB_VERSION = 2; // v2 adds the medicines store
   let dbPromise = null;
 
   const SCHEMA = {
@@ -28,6 +28,7 @@ const CMS_DB = (() => {
       keyPath: "id",
       indexes: [["patientId", "patientId"], ["doctorId", "doctorId"], ["status", "status"]],
     },
+    medicines: { keyPath: "id", indexes: [["name", "name"]] },
     keystore: { keyPath: "id", indexes: [] },
     meta: { keyPath: "id", indexes: [] },
     auditLog: { keyPath: "id", indexes: [["at", "at"]] },

@@ -89,13 +89,13 @@
       <div class="container grid-2">
         <div>
           <h2>About this system</h2>
-          <p>This portal was built as a university case study in secure web application design. It runs entirely in the browser using HTML5, CSS3 and vanilla JavaScript, with IndexedDB acting as the clinical database and JSON files simulating data delivered from a server.</p>
+          <p>This portal was built as a university case study in secure web application design. It runs entirely in the browser using HTML5, CSS3 and vanilla JavaScript, with IndexedDB acting as the clinical database, populated from the module's JSON data on the server.</p>
           <p>Three account types — patient, doctor and administrator — each see a different dashboard and can only perform the actions their role permits.</p>
           <a class="btn btn-secondary" href="er-diagram.html">View the database ER diagram</a>
         </div>
         <ul class="check-list">
           <li>IndexedDB object stores with indexes and relationships by ID</li>
-          <li>JSON seed data loaded with <code>fetch()</code>, duplicate-safe</li>
+          <li>Doctors, patients, admins and medicines fetched from the course JSON server with <code>fetch()</code>, duplicate-safe</li>
           <li>Create, read, update and delete across every clinical entity</li>
           <li>PBKDF2-SHA256 password hashing via the Web Crypto API</li>
           <li>AES-256-GCM encryption of sensitive fields at rest</li>
@@ -142,9 +142,9 @@
           <h3>Demonstration credentials</h3>
           <p>Use these accounts to explore each role.</p>
           <dl class="kv" style="margin-top:.8rem">
-            <dt>Admin</dt><dd>admin@example.com / AdminDemo!12345</dd>
-            <dt>Doctor</dt><dd>doctor01@example.com / DoctorDemo!12345</dd>
-            <dt>Patient</dt><dd>patient001@example.com / PatientDemo!12345</dd>
+            <dt>Admin</dt><dd>skestian0@telegraph.co.uk / AdminDemo!12345</dd>
+            <dt>Doctor</dt><dd>vrilton0@discuz.net / DoctorDemo!12345</dd>
+            <dt>Patient</dt><dd>lvasilik0@java.com / PatientDemo!12345</dd>
           </dl>
         </div>
       </div>

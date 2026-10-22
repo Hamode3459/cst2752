@@ -13,10 +13,15 @@ const CMS_Data = (() => {
     return record ? CMS_Encryption.decryptRecord(record) : null;
   }
   async function doctors() {
-    return CMS_DB.getAllRecords("doctors");
+    return CMS_Encryption.decryptAll(await CMS_DB.getAllRecords("doctors"));
   }
   async function doctor(id) {
-    return CMS_DB.getRecord("doctors", id);
+    const record = await CMS_DB.getRecord("doctors", id);
+    return record ? CMS_Encryption.decryptRecord(record) : null;
+  }
+  /** Medicine list imported from the course medicines.json, A-Z. */
+  async function medicines() {
+    return (await CMS_DB.getAllRecords("medicines")).sort((a, b) => a.name.localeCompare(b.name));
   }
   async function appointments(filter = {}) {
     let rows = filter.patientId
@@ -75,6 +80,7 @@ const CMS_Data = (() => {
     patient,
     doctors,
     doctor,
+    medicines,
     appointments,
     prescriptions,
     medicalRecords,

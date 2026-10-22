@@ -40,7 +40,18 @@ Open this folder in VS Code, install/use the Live Server extension, and choose *
 - `er-diagram.html` — database diagram
 - `rubric.html` — assessment rubric
 
-Styles are in `css/`, JavaScript in `js/`, and fictional seed data in `data/`.
+Styles are in `css/`, JavaScript in `js/`, and seed data in `data/`.
+
+## Data source
+
+`js/seed.js` fetches doctors, patients, admins and medicines from the course JSON server:
+
+- https://jsethi-mdx.github.io/cst2572.github.io/doctors.json
+- https://jsethi-mdx.github.io/cst2572.github.io/patients.json
+- https://jsethi-mdx.github.io/cst2572.github.io/admin.json
+- https://jsethi-mdx.github.io/cst2572.github.io/medicines.json
+
+If the server can't be reached it uses the copies in `data/course/`. The sample appointments, prescriptions and medical records in `data/` are linked to the imported patients and doctors.
 
 ## Demo accounts
 
@@ -49,7 +60,10 @@ Use **Load Demo Data** on the landing page first. Demo passwords are:
 - Doctor: `DoctorDemo!12345`
 - Admin: `AdminDemo!12345`
 
-Use the email addresses listed in `data/patients.json`, `data/doctors.json`, and `data/admins.json`.
+Logins use the emails from the course JSON, for example:
+- Admin: `skestian0@telegraph.co.uk`
+- Doctor: `vrilton0@discuz.net`
+- Patient: `lvasilik0@java.com`
 
 ## Important
 

@@ -157,6 +157,7 @@ const CMS_Auth = (() => {
 /** Fields encrypted at rest with AES-256-GCM, per object store. */
 const CMS_Encryption_FIELDS = {
   patients: ["address", "telephone", "nhsNumber", "emergencyContact"],
+  doctors: ["address", "telephone"],
   medicalRecords: ["diagnosis", "notes", "treatment"],
   prescriptions: ["instructions"],
   appointments: ["reason", "notes"],

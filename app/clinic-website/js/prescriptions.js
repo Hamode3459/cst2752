@@ -16,6 +16,8 @@ CMS.bootDashboard({
       session.role === PATIENT ? Promise.resolve([]) : CMS_Data.patients(),
       CMS_Data.doctors(),
     ]);
+    const medicines = await CMS_Data.medicines();
+    const medicineNames = new Set(medicines.map((m) => m.name.toLowerCase()));
     const patientMap = CMS_Data.indexById(patients);
     const doctorMap = CMS_Data.indexById(doctors);
     const filter = session.role === PATIENT ? { patientId: profile.id } : session.role === DOCTOR ? { doctorId: profile.id } : {};
@@ -123,6 +125,18 @@ CMS.bootDashboard({
     statusFilter.addEventListener("change", draw);
     draw();
 
+    /* Suggestions for the medicine inputs, from the course medicines.json */
+    function medicineList() {
+      const list = document.createElement("datalist");
+      list.id = "medicine-list";
+      medicines.forEach((m) => {
+        const option = document.createElement("option");
+        option.value = m.name;
+        list.appendChild(option);
+      });
+      return list;
+    }
+
     /* ---------------- Patient request ---------------- */
     function openRequestForm() {
       const form = document.createElement("form");
@@ -130,10 +144,11 @@ CMS.bootDashboard({
       form.noValidate = true;
       form.innerHTML = `
         <div class="field"><label for="r-doctor">Doctor</label><select id="r-doctor"></select><span class="error" role="alert"></span></div>
-        <div class="field"><label for="r-medicine">Medicine</label><input id="r-medicine" type="text" /><span class="error" role="alert"></span></div>
+        <div class="field"><label for="r-medicine">Medicine</label><input id="r-medicine" type="text" list="medicine-list" autocomplete="off" /><span class="error" role="alert"></span></div>
         <div class="field"><label for="r-reason">Reason for request</label><input id="r-reason" type="text" /><span class="error" role="alert"></span></div>
         <div class="field"><label for="r-info">Additional information</label><textarea id="r-info" maxlength="400"></textarea><span class="error" role="alert"></span></div>
         <p style="margin:0;font-size:.86rem;color:var(--ink-soft)">Requests are reviewed by a doctor. No medicine is issued automatically.</p>`;
+      form.appendChild(medicineList());
 
       const doctorSelect = form.querySelector("#r-doctor");
       [...doctors].sort((a, b) => a.lastName.localeCompare(b.lastName)).forEach((doctor) => {
@@ -153,7 +168,7 @@ CMS.bootDashboard({
             const reason = form.querySelector("#r-reason").value;
             const info = form.querySelector("#r-info").value;
             const ok = CMS_Validate.apply({
-              "r-medicine": CMS_Validate.minLength(medicine, 3, "Medicine"),
+              "r-medicine": medicineNames.has(medicine.trim().toLowerCase()) ? "" : "Choose a medicine from the list.",
               "r-reason": CMS_Validate.minLength(reason, 4, "Reason"),
             });
             if (!ok) return;
@@ -196,13 +211,14 @@ CMS.bootDashboard({
       form.noValidate = true;
       form.innerHTML = `
         <div class="field" style="grid-column:1/-1"><label for="i-patient">Patient</label><select id="i-patient"></select><span class="error" role="alert"></span></div>
-        <div class="field"><label for="i-medicine">Medicine</label><input id="i-medicine" type="text" /><span class="error" role="alert"></span></div>
+        <div class="field"><label for="i-medicine">Medicine</label><input id="i-medicine" type="text" list="medicine-list" autocomplete="off" /><span class="error" role="alert"></span></div>
         <div class="field"><label for="i-dosage">Dosage</label><input id="i-dosage" type="text" placeholder="500mg" /><span class="error" role="alert"></span></div>
         <div class="field"><label for="i-frequency">Frequency</label><input id="i-frequency" type="text" placeholder="Twice daily" /><span class="error" role="alert"></span></div>
         <div class="field"><label for="i-start">Start date</label><input id="i-start" type="date" /><span class="error" role="alert"></span></div>
         <div class="field"><label for="i-end">End date</label><input id="i-end" type="date" /><span class="error" role="alert"></span></div>
         <div class="field"><label for="i-status">Status</label><select id="i-status"><option>Approved</option><option>Active</option><option>Completed</option></select><span class="error" role="alert"></span></div>
         <div class="field" style="grid-column:1/-1"><label for="i-instructions">Instructions</label><textarea id="i-instructions" maxlength="500"></textarea><span class="error" role="alert"></span></div>`;
+      form.appendChild(medicineList());
 
       const patientSelect = form.querySelector("#i-patient");
       [...patients].sort((a, b) => a.lastName.localeCompare(b.lastName)).forEach((patient) => {
