@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in — Clinical Patient Management System</title>
+  <meta name="description" content="Sign in to the clinical patient management demonstration portal as a patient, doctor or administrator." />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body style="display:flex;flex-direction:column;min-height:100vh">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">✚</span>
+        <span class="brand-name">Clinical CMS<span class="brand-sub">Patient Management</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container auth-wrap">
+    <div class="auth-card">
+      <h1 style="font-size:1.6rem">Sign in</h1>
+      <p style="color:var(--ink-soft)">Access your patient, doctor or administrator dashboard.</p>
+
+      <form id="login-form" class="form-grid" novalidate>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" autocomplete="username" required />
+          <span class="error" role="alert"></span>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required />
+          <span class="error" role="alert"></span>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit" id="submit">Sign in</button>
+        <p id="form-status" style="margin:0;font-size:.9rem;color:var(--ink-soft)"></p>
+      </form>
+
+      <div class="demo-credentials">
+        <strong>Demonstration credentials</strong>
+        <div style="margin-top:.4rem">Admin — <code>skestian0@telegraph.co.uk</code> / <code>AdminDemo!12345</code></div>
+        <div>Doctor — <code>vrilton0@discuz.net</code> / <code>DoctorDemo!12345</code></div>
+        <div>Patient — <code>lvasilik0@java.com</code> / <code>PatientDemo!12345</code></div>
+        <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.6rem">
+          <button class="btn btn-sm btn-secondary" type="button" data-fill="admin">Fill admin</button>
+          <button class="btn btn-sm btn-secondary" type="button" data-fill="doctor">Fill doctor</button>
+          <button class="btn btn-sm btn-secondary" type="button" data-fill="patient">Fill patient</button>
+        </div>
+      </div>
+
+      <p style="margin-top:1.2rem;font-size:.92rem">No account yet? <a href="register.html">Register as a patient</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="disclaimer" style="margin:0;border:0;padding:0">Academic Demonstration System — All patient information is fictional.</p>
+    </div>
+  </footer>
+
+  <div id="toast-region" role="status" aria-live="polite"></div>
+
+  <script src="./js/security.js"></script>
+  <script src="./js/database.js"></script>
+  <script src="./js/encryption.js"></script>
+  <script src="./js/validation.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/seed.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+  <script>
+    (async function initLogin() {
+      CMS.flushFlash();
+      const status = document.getElementById("form-status");
+      const submit = document.getElementById("submit");
+      const DEMO = {
+        admin: ["skestian0@telegraph.co.uk", "AdminDemo!12345"],
+        doctor: ["vrilton0@discuz.net", "DoctorDemo!12345"],
+        patient: ["lvasilik0@java.com", "PatientDemo!12345"],
+      };
+
+      // Pre-fill from the landing page role buttons.
+      const role = new URLSearchParams(location.search).get("role");
+      if (DEMO[role]) document.getElementById("email").value = DEMO[role][0];
+
+      document.querySelectorAll("[data-fill]").forEach((button) => {
+        button.addEventListener("click", () => {
+          const [email, password] = DEMO[button.dataset.fill];
+          document.getElementById("email").value = email;
+          document.getElementById("password").value = password;
+        });
+      });
+
+      status.textContent = "Preparing the demonstration database…";
+      submit.disabled = true;
+      try {
+        await CMS_Seed.ensureReady((message) => { status.textContent = message; });
+        status.textContent = "";
+      } catch (error) {
+        console.error(error);
+        status.textContent = "The local database could not be prepared. Please refresh the page.";
+      }
+      submit.disabled = false;
+
+      document.getElementById("login-form").addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const valid = CMS_Validate.apply({
+          email: CMS_Validate.email(email),
+          password: CMS_Validate.required(password, "Password"),
+        });
+        if (!valid) { CMS.toast("Please correct the highlighted fields.", "error"); return; }
+
+        submit.disabled = true;
+        status.textContent = "Verifying credentials…";
+        try {
+          const result = await CMS_Auth.login(email, password);
+          if (!result.ok) {
+            status.textContent = "";
+            CMS.toast(result.message, "error");
+            submit.disabled = false;
+            return;
+          }
+          CMS.toast("Signed in successfully.", "success");
+          window.location.href = result.redirect;
+        } catch (error) {
+          console.error(error);
+          status.textContent = "";
+          submit.disabled = false;
+          CMS.toast("Something went wrong. Please try again.", "error");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

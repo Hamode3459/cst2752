@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinical Patient Management System — Academic Demonstration</title>
+  <meta name="description" content="Academic demonstration of a clinical patient management portal built with HTML, CSS, vanilla JavaScript and IndexedDB. All patient data is fictional." />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">✚</span>
+        <span class="brand-name">Clinical CMS<span class="brand-sub">Patient Management</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#security">Security</a>
+        <a href="#contact">Contact</a>
+        <a href="er-diagram.html">ER Diagram</a>
+        <a href="rubric.html">Rubric</a>
+        <a class="btn btn-primary" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ---------------- Hero ---------------- -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Academic demonstration system</span>
+          <h1>Clinical Patient Management System</h1>
+          <p class="lead">Securely manage appointments, medical records, prescriptions and patient information.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="login.html?role=patient">Patient Login</a>
+            <a class="btn btn-secondary" href="login.html?role=doctor">Doctor Login</a>
+            <a class="btn btn-secondary" href="login.html?role=admin">Admin Login</a>
+          </div>
+          <p style="margin-top:1.4rem;font-size:.9rem;color:var(--ink-soft)">
+            New patient? <a href="register.html">Create a patient account</a>.
+          </p>
+        </div>
+        <aside class="hero-panel">
+          <h3>Live demonstration database</h3>
+          <p style="font-size:.9rem;color:var(--ink-soft);margin:.4rem 0 0">
+            Fictional records stored in your browser with IndexedDB.
+          </p>
+          <div class="mini-stats" id="home-stats">
+            <div class="mini-stat"><strong id="stat-patients">—</strong><span>Patients</span></div>
+            <div class="mini-stat"><strong id="stat-doctors">—</strong><span>Doctors</span></div>
+            <div class="mini-stat"><strong id="stat-appointments">—</strong><span>Appointments</span></div>
+            <div class="mini-stat"><strong id="stat-prescriptions">—</strong><span>Prescriptions</span></div>
+          </div>
+          <p id="seed-status" style="font-size:.84rem;color:var(--ink-soft);margin:.9rem 0 .6rem">Checking local database…</p>
+          <button class="btn btn-primary btn-block" id="load-demo" type="button">Load Demo Data</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ---------------- Services ---------------- -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Everything a small clinic needs to coordinate care, modelled end to end in the browser.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="card-icon" aria-hidden="true">Pt</div><h3>Patient Management</h3><p>Create, search, update and remove patient demographics with full audit of every change.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">Ap</div><h3>Appointment Booking</h3><p>Patients request appointments; clinicians confirm, complete or cancel them.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">Rc</div><h3>Medical Records</h3><p>Diagnoses, clinical notes and treatment plans presented as a patient timeline.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">Rx</div><h3>Prescriptions</h3><p>Prescription requests are reviewed by a doctor before any medicine is issued.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">Dr</div><h3>Doctor Management</h3><p>Thirty clinicians across ten specialities, each with their own caseload view.</p></article>
+          <article class="card"><div class="card-icon" aria-hidden="true">Se</div><h3>Secure Data Management</h3><p>Hashed passwords, AES-256-GCM encrypted fields and role-based access control.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------- About ---------------- -->
+    <section class="section section-alt" id="about">
+      <div class="container grid-2">
+        <div>
+          <h2>About this system</h2>
+          <p>This portal was built as a university case study in secure web application design. It runs entirely in the browser using HTML5, CSS3 and vanilla JavaScript, with IndexedDB acting as the clinical database, populated from the module's JSON data on the server.</p>
+          <p>Three account types — patient, doctor and administrator — each see a different dashboard and can only perform the actions their role permits.</p>
+          <a class="btn btn-secondary" href="er-diagram.html">View the database ER diagram</a>
+        </div>
+        <ul class="check-list">
+          <li>IndexedDB object stores with indexes and relationships by ID</li>
+          <li>Doctors, patients, admins and medicines fetched from the course JSON server with <code>fetch()</code>, duplicate-safe</li>
+          <li>Create, read, update and delete across every clinical entity</li>
+          <li>PBKDF2-SHA256 password hashing via the Web Crypto API</li>
+          <li>AES-256-GCM encryption of sensitive fields at rest</li>
+          <li>Responsive layouts for desktop, tablet and mobile</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ---------------- Security ---------------- -->
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head">
+          <h2>Security by design</h2>
+          <p>Controls implemented in this prototype, and the limits of what a browser-only application can guarantee.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><h3>Password protection</h3><p>Passwords are salted and derived with PBKDF2-SHA256 (210,000 iterations). Plaintext is never stored or logged.</p></article>
+          <article class="card"><h3>Data encryption</h3><p>Addresses, NHS numbers, clinical notes and prescription instructions are encrypted with AES-256-GCM before storage.</p></article>
+          <article class="card"><h3>Input validation</h3><p>Email, password strength, NHS number, telephone and date of birth are validated before anything is saved.</p></article>
+          <article class="card"><h3>Input sanitisation</h3><p>User input is stripped of markup and rendered with <code>textContent</code> to prevent XSS and HTML injection.</p></article>
+          <article class="card"><h3>IndexedDB storage</h3><p>All clinical data lives in the browser's IndexedDB database <code>ClinicalManagementDB</code>.</p></article>
+          <article class="card"><h3>Role-based access</h3><p>Every dashboard page checks the session role and denies access to pages outside the user's permissions.</p></article>
+        </div>
+        <div class="note" style="margin-top:1.4rem">
+          <strong>Important limitation.</strong> Client-side authorisation and browser-held encryption keys cannot protect real patient data. A production healthcare system requires server-side authentication, HTTPS/TLS, audit logging and a secured database server. See the README for the full analysis.
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------- Contact ---------------- -->
+    <section class="section section-alt" id="contact">
+      <div class="container grid-2">
+        <div>
+          <h2>Contact</h2>
+          <p>This is a fictional clinic created for assessment purposes. The details below are illustrative only.</p>
+          <dl class="kv">
+            <dt>Demonstration clinic</dt><dd>Riverside Community Practice (fictional)</dd>
+            <dt>Email</dt><dd>enquiries@example.com</dd>
+            <dt>Telephone</dt><dd>0161 000 0000</dd>
+            <dt>Hours</dt><dd>Monday to Friday, 08:00–18:00</dd>
+          </dl>
+        </div>
+        <div class="card">
+          <h3>Demonstration credentials</h3>
+          <p>Use these accounts to explore each role.</p>
+          <dl class="kv" style="margin-top:.8rem">
+            <dt>Admin</dt><dd>skestian0@telegraph.co.uk / AdminDemo!12345</dd>
+            <dt>Doctor</dt><dd>vrilton0@discuz.net / DoctorDemo!12345</dd>
+            <dt>Patient</dt><dd>lvasilik0@java.com / PatientDemo!12345</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html" style="color:#fff">
+            <span class="brand-mark" aria-hidden="true">✚</span>
+            <span class="brand-name">Clinical CMS<span class="brand-sub">Patient Management</span></span>
+          </a>
+          <p style="margin-top:.8rem;max-width:42ch">A university case study in secure clinical web application design, built with HTML, CSS, JavaScript and IndexedDB.</p>
+        </div>
+        <div>
+          <h4>System</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="er-diagram.html">ER Diagram</a></li>
+            <li><a href="rubric.html">Rubric Mapping</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#security">Security</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="disclaimer">Academic Demonstration System — All patient information is fictional. This application does not contain real patient data and must not be used for clinical purposes.</p>
+    </div>
+  </footer>
+
+  <div id="toast-region" role="status" aria-live="polite"></div>
+
+  <script src="./js/security.js"></script>
+  <script src="./js/database.js"></script>
+  <script src="./js/encryption.js"></script>
+  <script src="./js/validation.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/seed.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+  <script>
+    /* Home page: show live database counts and offer the seeding action. */
+    (async function initHome() {
+      const status = document.getElementById("seed-status");
+      const button = document.getElementById("load-demo");
+
+      async function refresh() {
+        try {
+          const [patients, doctors, appointments, prescriptions] = await Promise.all([
+            CMS_DB.countRecords("patients"),
+            CMS_DB.countRecords("doctors"),
+            CMS_DB.countRecords("appointments"),
+            CMS_DB.countRecords("prescriptions"),
+          ]);
+          document.getElementById("stat-patients").textContent = patients;
+          document.getElementById("stat-doctors").textContent = doctors;
+          document.getElementById("stat-appointments").textContent = appointments;
+          document.getElementById("stat-prescriptions").textContent = prescriptions;
+          const seeded = await CMS_Seed.isSeeded();
+          status.textContent = seeded
+            ? "Demo database ready in this browser."
+            : "No demo data yet — load it to explore the system.";
+          button.disabled = seeded;
+          button.textContent = seeded ? "Demo data already loaded" : "Load Demo Data";
+        } catch (error) {
+          console.error(error);
+          status.textContent = "IndexedDB is unavailable in this browser.";
+        }
+      }
+
+      try {
+        await CMS_DB.initDatabase();
+        await refresh();
+      } catch (error) {
+        console.error(error);
+        status.textContent = "IndexedDB is unavailable in this browser.";
+      }
+
+      button.addEventListener("click", async () => {
+        button.disabled = true;
+        try {
+          await CMS_Seed.loadDemoData((message) => { status.textContent = message; });
+          CMS.toast("Demo data loaded successfully.", "success");
+        } catch (error) {
+          console.error(error);
+          CMS.toast("Something went wrong while loading the demo data.", "error");
+        }
+        await refresh();
+      });
+    })();
+  </script>
+</body>
+</html>

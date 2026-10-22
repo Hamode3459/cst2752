@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Database ER Diagram — Clinical Patient Management System</title>
+  <meta name="description" content="Entity relationship diagram for the ClinicalManagementDB IndexedDB database: users, patients, doctors, admins, appointments, medical records and prescriptions." />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body style="display:flex;flex-direction:column;min-height:100vh">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">✚</span>
+        <span class="brand-name">Clinical CMS<span class="brand-sub">Patient Management</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="rubric.html">Rubric</a>
+        <a class="btn btn-primary" href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container doc-page">
+    <h1>Database ER Diagram</h1>
+    <p style="max-width:70ch;color:var(--ink-soft)">
+      <strong>ClinicalManagementDB</strong> is an IndexedDB database with seven application object stores plus
+      supporting stores for the encryption key, seed metadata and the activity log. IndexedDB has no foreign key
+      constraints, so relationships are modelled with stored ID references and enforced in application code.
+    </p>
+
+    <div class="er-legend">
+      <span><span class="key key-pk">PK</span> Primary key (keyPath)</span>
+      <span><span class="key key-fk">FK</span> Foreign key (ID reference)</span>
+      <span>1 → ∞ One-to-many relationship</span>
+    </div>
+
+    <section aria-label="Relationship overview">
+      <h2>Relationships</h2>
+      <pre style="background:var(--white);border:1px solid var(--line);border-radius:12px;padding:1.2rem;overflow:auto">
+USER (1) ──── (1) PATIENT
+USER (1) ──── (1) DOCTOR
+USER (1) ──── (1) ADMIN
+
+PATIENT (1) ──── (∞) APPOINTMENTS (∞) ──── (1) DOCTOR
+PATIENT (1) ──── (∞) MEDICAL_RECORDS (∞) ──── (1) DOCTOR
+PATIENT (1) ──── (∞) PRESCRIPTIONS (∞) ──── (1) DOCTOR
+      </pre>
+    </section>
+
+    <section aria-label="Object stores">
+      <h2>Object stores</h2>
+      <div class="er-board">
+        <article class="er-table">
+          <header>users</header>
+          <ul>
+            <li><span>id</span><span class="key key-pk">PK</span></li>
+            <li><span>email</span><span>unique index</span></li>
+            <li><span>passwordHash</span><span>salt + PBKDF2 hash</span></li>
+            <li><span>role</span><span>PATIENT | DOCTOR | ADMIN</span></li>
+            <li><span>createdAt</span><span>ISO date</span></li>
+          </ul>
+        </article>
+
+        <article class="er-table">
+          <header>patients</header>
+          <ul>
+            <li><span>id</span><span class="key key-pk">PK</span></li>
+            <li><span>userId</span><span class="key key-fk">FK → users.id</span></li>
+            <li><span>firstName / lastName</span><span>text</span></li>
+            <li><span>address</span><span>encrypted</span></li>
+            <li><span>telephone</span><span>encrypted</span></li>
+            <li><span>dateOfBirth</span><span>date</span></li>
+            <li><span>nhsNumber</span><span>encrypted</span></li>
+            <li><span>email</span><span>text</span></li>
+            <li><span>emergencyContact</span><span>encrypted</span></li>
+            <li><span>createdAt / updatedAt</span><span>ISO date</span></li>
+          </ul>
+        </article>
+
+        <article class="er-table">
+          <header>doctors</header>
+          <ul>
+            <li><span>id</span><span class="key key-pk">PK</span></li>
+            <li><span>userId</span><span class="key key-fk">FK → users.id</span></li>
+            <li><span>firstName / lastName</span><span>text</span></li>
+            <li><span>speciality</span><span>indexed</span></li>
+            <li><span>telephone / email</span><span>text</span></li>
+            <li><span>doctorNumber</span><span>text</span></li>
+            <li><span>createdAt</span><span>ISO date</span></li>
+          </ul>
+        </article>
+
+        <article class="er-table">
+          <header>admins</header>
+          <ul>
+            <li><span>id</span><span class="key key-pk">PK</span></li>
+            <li><span>userId</span><span class="key key-fk">FK → users.id</span></li>
+            <li><span>firstName / lastName</span><span>text</span></li>
+            <li><span>email</span><span>text</span></li>
+            <li><span>createdAt</span><span>ISO date</span></li>
+          </ul>
+        </article>
+
+        <article class="er-table">
+          <header>appointments</header>
+          <ul>
+            <li><span>id</span><span class="key key-pk">PK</span></li>
+            <li><span>patientId</span><span class="key key-fk">FK → patients.id</span></li>
+            <li><span>doctorId</span><span class="key key-fk">FK → doctors.id</span></li>
+            <li><span>date / time</span><span>indexed</span></li>
+            <li><span>reason</span><span>encrypted</span></li>
+            <li><span>status</span><span>Requested…Cancelled</span></li>
+            <li><span>notes</span><span>encrypted</span></li>
+            <li><span>createdAt</span><span>ISO date</span></li>
+          </ul>
+        </article>
+
+        <article class="er-table">
+          <header>medicalRecords</header>
+          <ul>
+            <li><span>id</span><span class="key key-pk">PK</span></li>
+            <li><span>patientId</span><span class="key key-fk">FK → patients.id</span></li>
+            <li><span>doctorId</span><span class="key key-fk">FK → doctors.id</span></li>
+            <li><span>date</span><span>indexed</span></li>
+            <li><span>diagnosis</span><span>encrypted</span></li>
+            <li><span>notes</span><span>encrypted</span></li>
+            <li><span>treatment</span><span>encrypted</span></li>
+            <li><span>followUp</span><span>text</span></li>
+          </ul>
+        </article>
+
+        <article class="er-table">
+          <header>prescriptions</header>
+          <ul>
+            <li><span>id</span><span class="key key-pk">PK</span></li>
+            <li><span>patientId</span><span class="key key-fk">FK → patients.id</span></li>
+            <li><span>doctorId</span><span class="key key-fk">FK → doctors.id</span></li>
+            <li><span>medicine / dosage</span><span>text</span></li>
+            <li><span>frequency</span><span>text</span></li>
+            <li><span>instructions</span><span>encrypted</span></li>
+            <li><span>startDate / endDate</span><span>date</span></li>
+            <li><span>status</span><span>Requested…Rejected</span></li>
+          </ul>
+        </article>
+
+        <article class="er-table">
+          <header>keystore / meta / auditLog</header>
+          <ul>
+            <li><span>keystore.id</span><span class="key key-pk">PK</span></li>
+            <li><span>keystore.key</span><span>non-extractable AES key</span></li>
+            <li><span>meta.id</span><span>seed flag</span></li>
+            <li><span>auditLog.id</span><span class="key key-pk">PK</span></li>
+            <li><span>auditLog.at / action</span><span>indexed activity</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="SVG diagram">
+      <h2>Visual diagram</h2>
+      <svg viewBox="0 0 900 430" role="img" aria-label="Entity relationship diagram showing users linked to patients, doctors and admins, and patients and doctors linked to appointments, medical records and prescriptions" style="width:100%;background:#fff;border:1px solid var(--line);border-radius:12px">
+        <defs>
+          <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+            <path d="M0,0 L9,4.5 L0,9 z" fill="#0d6e77" />
+          </marker>
+        </defs>
+        <g font-family="Segoe UI, sans-serif" font-size="13">
+          <rect x="360" y="20" width="170" height="52" rx="10" fill="#0d6e77" />
+          <text x="445" y="51" fill="#fff" text-anchor="middle" font-weight="700">USERS (PK id)</text>
+
+          <rect x="60" y="130" width="180" height="52" rx="10" fill="#d8f1f3" stroke="#0d6e77" />
+          <text x="150" y="161" text-anchor="middle" fill="#063d43" font-weight="700">PATIENTS</text>
+          <rect x="365" y="130" width="160" height="52" rx="10" fill="#d8f1f3" stroke="#0d6e77" />
+          <text x="445" y="161" text-anchor="middle" fill="#063d43" font-weight="700">DOCTORS</text>
+          <rect x="650" y="130" width="160" height="52" rx="10" fill="#d8f1f3" stroke="#0d6e77" />
+          <text x="730" y="161" text-anchor="middle" fill="#063d43" font-weight="700">ADMINS</text>
+
+          <rect x="40" y="290" width="200" height="52" rx="10" fill="#fff" stroke="#14487f" />
+          <text x="140" y="321" text-anchor="middle" fill="#14487f" font-weight="700">APPOINTMENTS</text>
+          <rect x="300" y="290" width="220" height="52" rx="10" fill="#fff" stroke="#14487f" />
+          <text x="410" y="321" text-anchor="middle" fill="#14487f" font-weight="700">MEDICAL_RECORDS</text>
+          <rect x="580" y="290" width="220" height="52" rx="10" fill="#fff" stroke="#14487f" />
+          <text x="690" y="321" text-anchor="middle" fill="#14487f" font-weight="700">PRESCRIPTIONS</text>
+
+          <g stroke="#0d6e77" stroke-width="2" fill="none" marker-end="url(#arrow)">
+            <path d="M400,72 L150,128" /><path d="M445,72 L445,128" /><path d="M490,72 L730,128" />
+            <path d="M120,182 L120,288" /><path d="M160,182 L380,288" /><path d="M190,182 L640,288" />
+            <path d="M420,182 L200,288" /><path d="M445,182 L430,288" /><path d="M470,182 L680,288" />
+          </g>
+          <text x="455" y="108" fill="#0d6e77" font-size="11">1 → 1</text>
+          <text x="95" y="240" fill="#0d6e77" font-size="11">1 → ∞</text>
+          <text x="500" y="240" fill="#0d6e77" font-size="11">1 → ∞</text>
+        </g>
+      </svg>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="disclaimer" style="margin:0;border:0;padding:0">Academic Demonstration System — All patient information is fictional.</p>
+    </div>
+  </footer>
+
+  <script src="./js/security.js"></script>
+  <script src="./js/database.js"></script>
+  <script src="./js/encryption.js"></script>
+  <script src="./js/validation.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/seed.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

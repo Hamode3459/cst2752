@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "MR0001",
+    "patientId": "P020",
+    "doctorId": "D009",
+    "date": "2025-09-26",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0002",
+    "patientId": "P038",
+    "doctorId": "D018",
+    "date": "2026-01-01",
+    "diagnosis": "Eczema",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Emollient and short topical steroid course",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0003",
+    "patientId": "P001",
+    "doctorId": "D010",
+    "date": "2026-01-21",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0004",
+    "patientId": "P033",
+    "doctorId": "D017",
+    "date": "2026-04-22",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0005",
+    "patientId": "P091",
+    "doctorId": "D028",
+    "date": "2026-03-25",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0006",
+    "patientId": "P056",
+    "doctorId": "D016",
+    "date": "2026-02-19",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0007",
+    "patientId": "P042",
+    "doctorId": "D020",
+    "date": "2026-07-25",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0008",
+    "patientId": "P047",
+    "doctorId": "D010",
+    "date": "2026-01-30",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0009",
+    "patientId": "P023",
+    "doctorId": "D005",
+    "date": "2025-10-23",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0010",
+    "patientId": "P011",
+    "doctorId": "D009",
+    "date": "2026-05-08",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0011",
+    "patientId": "P031",
+    "doctorId": "D018",
+    "date": "2026-06-16",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0012",
+    "patientId": "P066",
+    "doctorId": "D020",
+    "date": "2026-03-25",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0013",
+    "patientId": "P035",
+    "doctorId": "D029",
+    "date": "2025-10-12",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0014",
+    "patientId": "P080",
+    "doctorId": "D003",
+    "date": "2026-02-01",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0015",
+    "patientId": "P088",
+    "doctorId": "D020",
+    "date": "2025-10-21",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0016",
+    "patientId": "P061",
+    "doctorId": "D003",
+    "date": "2026-05-09",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0017",
+    "patientId": "P062",
+    "doctorId": "D019",
+    "date": "2025-09-25",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0018",
+    "patientId": "P082",
+    "doctorId": "D013",
+    "date": "2026-05-11",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0019",
+    "patientId": "P036",
+    "doctorId": "D008",
+    "date": "2026-06-13",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0020",
+    "patientId": "P025",
+    "doctorId": "D001",
+    "date": "2026-08-10",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0021",
+    "patientId": "P048",
+    "doctorId": "D021",
+    "date": "2026-08-09",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0022",
+    "patientId": "P003",
+    "doctorId": "D024",
+    "date": "2026-04-03",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0023",
+    "patientId": "P085",
+    "doctorId": "D008",
+    "date": "2026-08-15",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0024",
+    "patientId": "P028",
+    "doctorId": "D006",
+    "date": "2026-01-21",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0025",
+    "patientId": "P090",
+    "doctorId": "D001",
+    "date": "2025-12-12",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0026",
+    "patientId": "P058",
+    "doctorId": "D026",
+    "date": "2026-04-08",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0027",
+    "patientId": "P067",
+    "doctorId": "D024",
+    "date": "2026-07-14",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0028",
+    "patientId": "P018",
+    "doctorId": "D011",
+    "date": "2026-08-14",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0029",
+    "patientId": "P094",
+    "doctorId": "D028",
+    "date": "2026-08-22",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0030",
+    "patientId": "P044",
+    "doctorId": "D007",
+    "date": "2025-11-11",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0031",
+    "patientId": "P016",
+    "doctorId": "D006",
+    "date": "2025-11-18",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0032",
+    "patientId": "P050",
+    "doctorId": "D001",
+    "date": "2025-11-21",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0033",
+    "patientId": "P012",
+    "doctorId": "D002",
+    "date": "2026-07-16",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0034",
+    "patientId": "P090",
+    "doctorId": "D027",
+    "date": "2026-09-13",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0035",
+    "patientId": "P054",
+    "doctorId": "D007",
+    "date": "2026-02-21",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0036",
+    "patientId": "P080",
+    "doctorId": "D029",
+    "date": "2026-06-11",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0037",
+    "patientId": "P097",
+    "doctorId": "D006",
+    "date": "2026-04-02",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0038",
+    "patientId": "P029",
+    "doctorId": "D019",
+    "date": "2026-06-09",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0039",
+    "patientId": "P047",
+    "doctorId": "D004",
+    "date": "2026-08-03",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0040",
+    "patientId": "P011",
+    "doctorId": "D009",
+    "date": "2026-02-07",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0041",
+    "patientId": "P011",
+    "doctorId": "D029",
+    "date": "2025-09-30",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0042",
+    "patientId": "P049",
+    "doctorId": "D026",
+    "date": "2025-10-02",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0043",
+    "patientId": "P044",
+    "doctorId": "D027",
+    "date": "2026-04-25",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0044",
+    "patientId": "P023",
+    "doctorId": "D005",
+    "date": "2025-11-29",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0045",
+    "patientId": "P003",
+    "doctorId": "D006",
+    "date": "2026-09-03",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0046",
+    "patientId": "P006",
+    "doctorId": "D019",
+    "date": "2025-12-24",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0047",
+    "patientId": "P029",
+    "doctorId": "D001",
+    "date": "2025-12-02",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0048",
+    "patientId": "P077",
+    "doctorId": "D017",
+    "date": "2026-08-19",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0049",
+    "patientId": "P068",
+    "doctorId": "D021",
+    "date": "2026-05-17",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0050",
+    "patientId": "P082",
+    "doctorId": "D011",
+    "date": "2026-03-22",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0051",
+    "patientId": "P090",
+    "doctorId": "D026",
+    "date": "2026-07-26",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0052",
+    "patientId": "P030",
+    "doctorId": "D012",
+    "date": "2026-07-08",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0053",
+    "patientId": "P094",
+    "doctorId": "D008",
+    "date": "2026-04-10",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0054",
+    "patientId": "P045",
+    "doctorId": "D003",
+    "date": "2026-01-09",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0055",
+    "patientId": "P006",
+    "doctorId": "D017",
+    "date": "2025-12-26",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0056",
+    "patientId": "P094",
+    "doctorId": "D019",
+    "date": "2025-09-27",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0057",
+    "patientId": "P046",
+    "doctorId": "D026",
+    "date": "2026-02-27",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0058",
+    "patientId": "P032",
+    "doctorId": "D028",
+    "date": "2026-02-19",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0059",
+    "patientId": "P097",
+    "doctorId": "D022",
+    "date": "2025-11-06",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0060",
+    "patientId": "P056",
+    "doctorId": "D006",
+    "date": "2025-10-08",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0061",
+    "patientId": "P089",
+    "doctorId": "D009",
+    "date": "2026-01-28",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0062",
+    "patientId": "P030",
+    "doctorId": "D014",
+    "date": "2026-06-10",
+    "diagnosis": "Eczema",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Emollient and short topical steroid course",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0063",
+    "patientId": "P054",
+    "doctorId": "D003",
+    "date": "2025-10-17",
+    "diagnosis": "Eczema",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Emollient and short topical steroid course",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0064",
+    "patientId": "P065",
+    "doctorId": "D008",
+    "date": "2026-08-06",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0065",
+    "patientId": "P083",
+    "doctorId": "D020",
+    "date": "2025-10-15",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0066",
+    "patientId": "P091",
+    "doctorId": "D004",
+    "date": "2025-10-29",
+    "diagnosis": "Eczema",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Emollient and short topical steroid course",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0067",
+    "patientId": "P066",
+    "doctorId": "D009",
+    "date": "2026-01-14",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0068",
+    "patientId": "P065",
+    "doctorId": "D019",
+    "date": "2026-09-10",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0069",
+    "patientId": "P033",
+    "doctorId": "D006",
+    "date": "2026-01-21",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0070",
+    "patientId": "P064",
+    "doctorId": "D014",
+    "date": "2026-05-10",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0071",
+    "patientId": "P043",
+    "doctorId": "D013",
+    "date": "2026-09-15",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0072",
+    "patientId": "P009",
+    "doctorId": "D014",
+    "date": "2026-07-01",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0073",
+    "patientId": "P005",
+    "doctorId": "D008",
+    "date": "2026-02-07",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0074",
+    "patientId": "P034",
+    "doctorId": "D014",
+    "date": "2026-06-09",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0075",
+    "patientId": "P089",
+    "doctorId": "D028",
+    "date": "2026-04-14",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0076",
+    "patientId": "P015",
+    "doctorId": "D025",
+    "date": "2026-01-09",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0077",
+    "patientId": "P053",
+    "doctorId": "D001",
+    "date": "2026-09-16",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0078",
+    "patientId": "P076",
+    "doctorId": "D020",
+    "date": "2026-08-14",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0079",
+    "patientId": "P044",
+    "doctorId": "D026",
+    "date": "2026-05-25",
+    "diagnosis": "Eczema",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Emollient and short topical steroid course",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0080",
+    "patientId": "P006",
+    "doctorId": "D001",
+    "date": "2026-07-13",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0081",
+    "patientId": "P049",
+    "doctorId": "D010",
+    "date": "2025-09-27",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0082",
+    "patientId": "P055",
+    "doctorId": "D029",
+    "date": "2026-09-24",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0083",
+    "patientId": "P090",
+    "doctorId": "D009",
+    "date": "2025-10-24",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0084",
+    "patientId": "P093",
+    "doctorId": "D013",
+    "date": "2025-09-29",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0085",
+    "patientId": "P069",
+    "doctorId": "D022",
+    "date": "2026-05-06",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0086",
+    "patientId": "P034",
+    "doctorId": "D004",
+    "date": "2026-08-20",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0087",
+    "patientId": "P020",
+    "doctorId": "D007",
+    "date": "2025-12-06",
+    "diagnosis": "Upper respiratory tract infection",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Rest, fluids and paracetamol",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0088",
+    "patientId": "P031",
+    "doctorId": "D004",
+    "date": "2026-02-26",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0089",
+    "patientId": "P036",
+    "doctorId": "D008",
+    "date": "2025-10-19",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0090",
+    "patientId": "P044",
+    "doctorId": "D028",
+    "date": "2026-05-16",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0091",
+    "patientId": "P073",
+    "doctorId": "D015",
+    "date": "2026-02-10",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0092",
+    "patientId": "P060",
+    "doctorId": "D026",
+    "date": "2026-01-19",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0093",
+    "patientId": "P067",
+    "doctorId": "D028",
+    "date": "2026-03-23",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0094",
+    "patientId": "P078",
+    "doctorId": "D001",
+    "date": "2026-03-05",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0095",
+    "patientId": "P059",
+    "doctorId": "D011",
+    "date": "2026-04-12",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0096",
+    "patientId": "P013",
+    "doctorId": "D022",
+    "date": "2026-01-09",
+    "diagnosis": "Lower back strain",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Physiotherapy referral",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0097",
+    "patientId": "P014",
+    "doctorId": "D019",
+    "date": "2026-05-29",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0098",
+    "patientId": "P014",
+    "doctorId": "D030",
+    "date": "2025-09-25",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0099",
+    "patientId": "P045",
+    "doctorId": "D008",
+    "date": "2026-08-15",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0100",
+    "patientId": "P001",
+    "doctorId": "D008",
+    "date": "2026-01-31",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0101",
+    "patientId": "P079",
+    "doctorId": "D026",
+    "date": "2026-08-04",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0102",
+    "patientId": "P017",
+    "doctorId": "D022",
+    "date": "2026-06-25",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0103",
+    "patientId": "P090",
+    "doctorId": "D004",
+    "date": "2026-01-24",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0104",
+    "patientId": "P041",
+    "doctorId": "D004",
+    "date": "2026-09-16",
+    "diagnosis": "Hypertension",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Lifestyle advice and ramipril",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0105",
+    "patientId": "P067",
+    "doctorId": "D019",
+    "date": "2025-11-26",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0106",
+    "patientId": "P088",
+    "doctorId": "D009",
+    "date": "2025-11-06",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "Review in 3 months"
+  },
+  {
+    "id": "MR0107",
+    "patientId": "P029",
+    "doctorId": "D026",
+    "date": "2026-09-14",
+    "diagnosis": "Seasonal allergic rhinitis",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Antihistamine as required",
+    "followUp": "None required"
+  },
+  {
+    "id": "MR0108",
+    "patientId": "P008",
+    "doctorId": "D030",
+    "date": "2026-05-17",
+    "diagnosis": "Type 2 diabetes — stable",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Continue metformin, dietary advice",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0109",
+    "patientId": "P009",
+    "doctorId": "D006",
+    "date": "2026-06-13",
+    "diagnosis": "Iron deficiency anaemia",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Ferrous sulfate, repeat bloods in 3 months",
+    "followUp": "Review in 4 weeks"
+  },
+  {
+    "id": "MR0110",
+    "patientId": "P041",
+    "doctorId": "D001",
+    "date": "2026-06-07",
+    "diagnosis": "Migraine",
+    "notes": "Patient reviewed in clinic. Observations within expected range for this presentation.",
+    "treatment": "Trigger diary, simple analgesia",
+    "followUp": "Review in 3 months"
+  }
+]
