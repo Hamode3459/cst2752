@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medical Records — Clinical Patient Management System</title>
+  <meta name="description" content="Medical Records in the clinical patient management demonstration system. Academic project with fictional data only." />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Sidebar"></aside>
+    <div class="scrim" id="scrim" hidden></div>
+    <div class="app-main">
+      <header class="topbar" id="topbar"></header>
+      <main class="content" id="content" tabindex="-1"></main>
+      <footer style="padding:1rem 1.6rem;font-size:.82rem;color:var(--ink-soft)">
+        Academic Demonstration System — All patient information is fictional.
+      </footer>
+    </div>
+  </div>
+
+  <div id="toast-region" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-root" hidden></div>
+
+  <script src="./js/security.js"></script>
+  <script src="./js/database.js"></script>
+  <script src="./js/encryption.js"></script>
+  <script src="./js/validation.js"></script>
+  <script src="./js/auth.js"></script>
+  <script src="./js/seed.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/records.js"></script>
+</body>
+</html>
